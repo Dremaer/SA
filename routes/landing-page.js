@@ -10,6 +10,10 @@ router.get("/", landPageController.getLandPage);
 
 router.get("/community", landPageController.getCommunity);
 
+router.get("/login", landPageController.getLogin);
+
+router.get("/signup", landPageController.getSignUp);
+
 router.get("/quiz", landPageController.getQuiz);
 
 router.get("/quiz1", landPageController.getQuiz1);

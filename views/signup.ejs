@@ -1,0 +1,30 @@
+<%- include('partials/header'); -%>
+
+<div class="auth-container">
+    <div class="auth-form-wrapper">
+      <h2 class="text-center text-center1">Register to SA</h2>
+      <p class="text-center">Join us today and start your learning journey!</p>
+      <form action="/auth/signup" method="POST">
+        <div class="mb-3">
+          <label for="email" class="form-label">Email Address</label>
+          <input type="email" class="form-control" id="email" name="email" placeholder="Enter your email" required />
+        </div>
+        <div class="mb-3">
+          <label for="password" class="form-label">Password</label>
+          <input type="password" class="form-control" id="password" name="password" placeholder="Enter your password"
+            required />
+        </div>
+        <button type="submit" class="btn btn-primary w-100">Sign Up</button>
+      </form>
+      <div class="text-center mt-3">
+        <p>Already have an account? <a href="/login" class="text-primary"> Log in here</a></p>
+      </div>
+      <% if (typeof errorMessage !== "undefined" && errorMessage) { %>
+      <div class="alert alert-danger text-center mt-3">
+        <%= errorMessage %>
+      </div>
+      <% } %>
+    </div>
+</div>
+
+<%- include('partials/footer'); -%>
