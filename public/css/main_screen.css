@@ -8,8 +8,13 @@ body {
     background-color: #25283D;
 }
 
+.container {
+    padding-left: 95px;
+    padding-right: 95px;
+}
+
 nav .navbar-brand img{
-    width: 50px;
+    width: 60px;
     height: auto;
 }
 
@@ -167,3 +172,9 @@ nav .navbar-brand img{
     text-decoration: underline;
 }
 
+#main-footer {
+    background-color: #ffffff;
+    color: #25283D;
+    font-size: 20px;
+    font-weight: 450;
+}

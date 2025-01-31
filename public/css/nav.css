@@ -6,17 +6,28 @@ body {
     font-family: 'Roboto slab', serif;
 }
 
+.container {
+    padding-left: 95px;
+    padding-right: 95px;
+}
+
 nav .navbar-brand img{
-    width: 50px;
+    width: 60px;
     height: auto;
 }
 
 .collapse {
-    padding-right: 50px;
+    padding-left: 214px;
 }
 
 .nav-link {
-    color: #848484;
+    font-weight: 600;
+    font-size: 20px;
+    color: #424242;
+}
+
+.nav-link:hover {
+    color: #585858;
 }
 
 .info {
@@ -88,5 +99,12 @@ nav .navbar-brand img{
 .col{
     padding-top: 12px;
     color: #25283D;
+}
+
+#main-footer{
+    background-color: #DBDBDB;
+    color: #424242;
+    font-size: 20px;
+    font-weight: 450;
 }
 
