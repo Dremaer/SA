@@ -1,11 +1,10 @@
-.container.mt-4 .header.text-center.mb-4 h1,
+/* .container.mt-4 .header.text-center.mb-4 h1,
 .container.mt-4 .header.text-center.mb-4 p {
     color: black;
     text-align: left;
 }
-.container.mt-4 .header.text-center.mb-4 .btn .discussion-button {
-    
-}
+.container.mt-4 .header.text-center.mb-4 {
+text-align: left;} */
 
 .discussion-button {
     background-color: #ECA72C; /* 버튼 배경색을 이미지와 맞게 조정 */
@@ -14,7 +13,7 @@
     padding: 10px 20px;
     border-radius: 5px;
     cursor: pointer;
-    font-size: 16px;
+    font-size: 14px;
     font-weight: bold;
     text-align: center;
     display: inline-flex;
@@ -25,21 +24,22 @@
     transition: background-color 0.3s;
 }
 
-/* 검색바 스타일 */
-.search-bar {
-    display: flex;
-    margin-bottom: 20px;
+.discussion-button:hover{
+    color: #ECA72C;
+    background-color: none;
+    border: 1px solid #f0cd91;
 }
 
+/* Search bar */
 .search-bar input {
     flex: 1;
     padding: 10px;
-    font-size: 16px;
-    border: 1px solid #ccc;
+    font-size: 14px;
+    border: 1px solid #aaa9a9;
     border-radius: 5px;
 }
 
-/* 토론 목록 스타일 */
+/* Discussion part */
 .discussion-list {
     list-style: none;
     padding: 0;
@@ -51,10 +51,11 @@
     align-items: center;
     background-color: #f8f9fa;
     border: 1px solid #ddd;
-    border-radius: 5px;
-    padding: 15px;
+    border-radius: 8px;
+    padding: 8px 0 5px 15px;
     margin-bottom: 10px;
     transition: background-color 0.3s;
+    cursor: pointer;
 }
 
 .discussion-item:hover {
@@ -69,6 +70,7 @@
 }
 
 .discussion-content {
+    padding-top: 15px;
     flex-grow: 1;
 }
 
@@ -82,4 +84,19 @@
     font-size: 0.9em;
     color: #777;
     margin-top: 5px;
+}
+
+/* .nav-link{
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.navbar{
+    border-bottom: 2px solid #e4e2e2;
+} */
+
+/* Discussion */
+#discussions .container {
+    width: 1200px;
+    margin: 0 auto;
 }

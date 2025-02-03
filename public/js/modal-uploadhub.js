@@ -1,6 +1,6 @@
 // Upload Hub modal structure
 const uploadHubModal = document.getElementById("uploadHub-modal");
-const uploadHubBtn = document.querySelector(".btn-right");
+const uploadHubBtn = document.querySelector(".uploadhub-btn");
 const uploadHubCloseBtn = document.getElementById("uploadHub-close-btn");
 
 uploadHubBtn.onclick = function() {

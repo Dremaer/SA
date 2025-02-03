@@ -68,23 +68,32 @@
             <div id="auth">
               <ul class="navbar-nav ms-auto">
                 <% if (!isAuthenticated) { %>
-                <li class="nav-item" <%=path==='/login' ? 'active' : '' %>>
-                  <a href="/login" class="nav-link">Log in</a>
-                </li>
-                <li class="nav-item" <%=path==='/signup' ? 'active' : '' %>>
-                  <a href="/signup" class="nav-link">Sign up</a>
-                </li>
+                  <li class="nav-item" <%=path==='/login' ? 'active' : '' %>>
+                    <a href="/login" class="nav-link">Log in</a>
+                  </li>
+                  <li class="nav-item" <%=path==='/signup' ? 'active' : '' %>>
+                    <a href="/signup" class="nav-link">Sign up</a>
+                  </li>
                 <% } else { %>
-                <div class="nav-item d-flex align-items-center">
-                  <!-- User Avatar -->
-                  <div class="user-avatar"
-                    style="background-image: url('/images/user.png'); width: 40px; height: 40px; background-size: cover; border-radius: 50%; margin-right: 10px;">
+                  <div class="nav-item dropdown">
+                    <!-- Profile Image (Click to Toggle Menu) -->
+                    <div class="user-avatar" id="profile-btn"
+                      style="background-image: url('/images/user.png'); width: 40px; height: 40px; background-size: cover; border-radius: 50%; cursor: pointer; position: relative;">
+                    </div>
+            
+                    <!-- Dropdown Menu (Initially Hidden) -->
+                    <div class="profile-dropdown" id="profile-dropdown">
+                      <ul>
+                        <li><a href="/progress">My progress</a></li>
+                        <li><a href="/reminders">Learning reminders</a></li>
+                        <li>
+                          <form action="/auth/logout" method="POST">
+                            <button type="submit" class="logout-btn">Logout</button>
+                          </form>
+                        </li>
+                      </ul>
+                    </div>
                   </div>
-                  <!-- Logout Button -->
-                  <form action="/auth/logout" method="POST" style="display: inline;">
-                    <button type="submit" class="btn nav-link logout p-0">Log out</button>
-                  </form>
-                </div>
                 <% } %>
               </ul>
             </div>                 

@@ -44,6 +44,24 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
+document.addEventListener('DOMContentLoaded', function() {
+    // Profile image
+    const profileBtn = document.getElementById("profile-btn");
+    const profileDropdown = document.getElementById("profile-dropdown");
+
+    profileBtn.addEventListener("click", function (event) {
+        event.stopPropagation(); // Prevents closing when clicking the avatar
+        profileDropdown.style.display = profileDropdown.style.display === "block" ? "none" : "block";
+    });
+
+    // Close dropdown when clicking outside
+    document.addEventListener("click", function (event) {
+        if (!profileDropdown.contains(event.target) && !profileBtn.contains(event.target)) {
+            profileDropdown.style.display = "none";
+        }
+    });
+})
+
 // Close the dropdown when clicking outside of it
 document.addEventListener('click', function (event) {
     // Check if the click is outside the dropdown and the link
